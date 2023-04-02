@@ -1,3 +1,5 @@
+package creationalPatterns.singleton;
+
 public class Singleton {
 
 
@@ -7,7 +9,7 @@ public class Singleton {
 
 
     private Singleton(){
-        s = "Hello, I am a string part of Singleton class";
+        s = "Hello, I am a string part of Singleton.Singleton class";
     }
 
     public static synchronized Singleton getInstance(){
