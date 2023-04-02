@@ -2,36 +2,25 @@ package Factory;
 
 import Factory.Animal.Animal;
 import Factory.Color.Color;
-import OldFactory.GetPlanFactory;
-import OldFactory.Plan;
 
-public class FactoryExample {
+public class AbstractFactoryExample {
 
-    public static void show(String type, String concreteType){
+    public static void show(String inputAnimal, String inputColor){
 
-        FactoryProvider planFactory = new FactoryProvider();
+        AbstractFactory abstractFactory;
 
-        AbstractFactory<Animal> test;
-        AbstractFactory<Color> test;
+        //creating a brown toy dog
+        abstractFactory = FactoryProvider.getFactory("Animal");
+        assert abstractFactory != null;
+        Animal animal =(Animal) abstractFactory.create(inputAnimal);
 
+        abstractFactory = FactoryProvider.getFactory("Color");
+        assert abstractFactory != null;
+        Color color =(Color) abstractFactory.create(inputColor);
 
+        String result = "A " + animal.getType() + " with " + color.getColor() + " color says: " + animal.makeSound();
 
-        if ("animal".equalsIgnoreCase(concreteType)){
-            Animal
-        }
-
-        Plan p = planFactory.getPlan(planName);
-
-        System.out.print("Bill amount for "+planName+" of  "+units+" units is: ");
-        p.getRate();
-        p.calculateBill(units);
-
-        planName = "CommercialPlan";
-        p = planFactory.getPlan(planName);
-
-        System.out.print("Bill amount for "+planName+" of  "+units+" units is: ");
-        p.getRate();
-        p.calculateBill(units);
+        System.out.println(result);
 
     }
 

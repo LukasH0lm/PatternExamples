@@ -1,26 +1,21 @@
-package OldFactory;
+package Factory;
+
+import Factory.Animal.Animal;
+import Factory.Animal.AnimalFactory;
+
 
 public class FactoryExample {
 
-    public static void show(){
+    public static void show(String animalName){
 
-        GetPlanFactory planFactory = new GetPlanFactory();
+        AnimalFactory animalFactory = new AnimalFactory();
 
-        int units = 10;
-        String planName = "DomesticPlan";
 
-        Plan p = planFactory.getPlan(planName);
+        Animal animal = animalFactory.create(animalName);
 
-        System.out.print("Bill amount for "+planName+" of  "+units+" units is: ");
-        p.getRate();
-        p.calculateBill(units);
+        System.out.print("The " + animal.getType() + " says: " + animal.makeSound());
 
-        planName = "CommercialPlan";
-        p = planFactory.getPlan(planName);
-
-        System.out.print("Bill amount for "+planName+" of  "+units+" units is: ");
-        p.getRate();
-        p.calculateBill(units);
+        System.out.println();
 
     }
 

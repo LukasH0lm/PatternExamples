@@ -1,2 +1,7 @@
-package Factory;public interface AbstractFactory {
+package Factory;
+
+public interface AbstractFactory<T> {
+
+    T create(String type);
+
 }

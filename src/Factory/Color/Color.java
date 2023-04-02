@@ -1,2 +1,7 @@
-package Factory.Color;public interface Color {
+package Factory.Color;
+
+public interface Color {
+
+    String getColor();
+
 }
