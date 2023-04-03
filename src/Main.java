@@ -1,7 +1,10 @@
-import creationalPatterns.builder.BuilderExample;
-import creationalPatterns.factory.AbstractFactoryExample;
-import creationalPatterns.factory.FactoryExample;
-import creationalPatterns.singleton.SingletonExample;
+import creational.builder.BuilderExample;
+import creational.factory.AbstractFactoryExample;
+import creational.factory.FactoryExample;
+import creational.prototype.PrototypeExample;
+import creational.singleton.SingletonExample;
+import structural.adapter.AdapterExample;
+import structural.facade.FacadeExample;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +25,6 @@ public class Main {
         // without specifying their concrete classes.
 
 
-
         System.out.println("\n Builder: \n");
         BuilderExample.show();
         //Builder is a creational design pattern
@@ -31,6 +33,11 @@ public class Main {
         //using the same construction code.
 
 
+        System.out.println("\n Prototype: \n");
+        PrototypeExample.show();
+        //Prototype is a creational design pattern
+        //that allows cloning objects, even complex ones,
+        // without coupling to their specific classes.
 
 
         System.out.println("\n Singleton: \n");
@@ -38,6 +45,25 @@ public class Main {
         // Singleton.Singleton is a creational design pattern
         // that lets you ensure that a class has only one instance,
         // while providing a global access point to this instance.
+
+
+
+        //Structural Patterns
+
+        System.out.println("\n Adapter: \n");
+        AdapterExample.show();
+        //Adapter is a structural design pattern
+        //that allows objects with incompatible interfaces to collaborate.
+
+
+
+        System.out.println("\n Facade: \n");
+        FacadeExample.show();
+        //Facade is a structural design pattern
+        //that provides a simplified interface to
+        //a library, a framework, or any other complex set of classes.
+
+
 
 
     }
