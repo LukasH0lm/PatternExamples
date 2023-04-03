@@ -1,3 +1,5 @@
+import behavioral.Iterator.spammer.IteratorExample;
+import behavioral.strategy.StrategyExample;
 import creational.builder.BuilderExample;
 import creational.factory.AbstractFactoryExample;
 import creational.factory.FactoryExample;
@@ -6,8 +8,10 @@ import creational.singleton.SingletonExample;
 import structural.adapter.AdapterExample;
 import structural.facade.FacadeExample;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // Creational design patterns:
 
@@ -63,6 +67,23 @@ public class Main {
         //that provides a simplified interface to
         //a library, a framework, or any other complex set of classes.
 
+
+        //Behavioral patterns:
+
+
+        System.out.println("\n Iterator: \n");
+        IteratorExample.show();
+        //Iterator is a behavioral design pattern
+        //that lets you traverse elements of a collection
+        //without exposing its underlying representation (list, stack, tree, etc.).
+
+
+        System.out.println("\n Strategy: \n");
+        StrategyExample.show();
+        //Strategy is a behavioral design pattern that
+        //lets you define a family of algorithms,
+        // put each of them into a separate class,
+        // and make their objects interchangeable.
 
 
 
