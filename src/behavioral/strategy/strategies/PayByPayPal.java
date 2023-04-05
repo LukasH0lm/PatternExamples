@@ -19,6 +19,7 @@ public class PayByPayPal implements PayStrategy {
     static {
         DATA_BASE.put("amanda1985", "amanda@ya.com");
         DATA_BASE.put("qwerty", "john@amazon.eu");
+        DATA_BASE.put("test", "test");
     }
 
     /**
